@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+html, body {
+    height: 100%;
+}
+/* body {background: red;} */
+/* body {background-color: red;} */
+/* mix type */
+/* body {background: red url('../img/BackgroundFront.png');} */
+/* body {background-image: url('../img/BackgroundFront.png'),url(../img/BackgroundBack.png);} */
+body {
+    /* background-image: url('../img/BackgroundFront.png'); */
+    /* background-image: url('../img/BackgroundFront.png'),url(../img/BackgroundBack.png); */
+    background-image: url(../img/moutain01.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-attachment: fixed;
+    /* background-position: 50% 50%; */
+    /* background-position: center center; */
+    /* background-position: 0 50%;
+    background-position: left center; */
+    /* background-position: 100% 50%; */
+    /* background-position: right center; */
+    /* background-position: right bottom; */
+    /* background-position: 0% 100%; */
+
+    /* 주의사항: 다중속성은 항상 개별속성 위에 적용해야한다. */
+    /* background: url(../img/BackgroundBack.png);
+    background-color: red; */
+}

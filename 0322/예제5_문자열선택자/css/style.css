@@ -1,0 +1,100 @@
+@charset 'UTF-8';
+html, body {
+    height: 100%;
+}
+
+/* input {
+    float: left;
+    margin-left: -6px;
+}
+
+.input-wrap input[name *= i] {
+    background-color: red;
+}
+
+.gnb {
+    background: #f1f1f1;
+}
+
+.gnb.yellow {
+    background: yellow;
+}
+
+.gnb.black {
+    background: black;
+}
+
+.gnb ul li {
+    height: 30px;
+    background: blueviolet;
+} */
+
+.gnb ul li a {
+    /* padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 50px 10px 20px 10px; */
+    display: inline-block;
+    padding: 0 10px;
+    color: white;
+}
+
+/* .gnb ul {
+    overflow: hidden;
+}
+
+.gnb ul li {
+    float: left;
+}
+
+.gnb[class ~= topmenu] {
+    display: none;
+}
+
+.location div[class |= jp] {
+    color: blue;
+}
+
+.thumbnail {
+    background-color: red;
+} */
+
+.thumbnail ul {
+    width: 800px;
+    margin: 0 auto;
+    background: red;
+}
+
+.thumbnail ul li {
+    width: calc(25% - 20px);
+    float: left;
+    margin: 10px;
+}
+
+.thumbnail ul li a img {
+    width: 100%;
+}
+
+/* .thumbnail ul li:nth-child(2n) {
+    opacity: .5;
+} */
+
+/* .thumbnail ul li:nth-child(even) {
+    opacity: .5;
+} */
+
+/* .thumbnail ul li:nth-of-type(even) {
+    opacity: .5;
+} */
+
+.thumbnail ul li a[href ^= https] {
+    opacity: .3;
+}
+
+.thumbnail ul li a img[src $= png] {
+    float: left;
+    border: 3px solid red;
+    box-sizing: border-box;
+}

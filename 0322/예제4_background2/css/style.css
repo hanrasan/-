@@ -1,0 +1,19 @@
+@charset 'UTF-8';
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-color: #fdfdfd;
+    background-image: url(../images/andy.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+}
+div {
+    background: rgba(138,43,226,.9);
+    /*#ffffff, rgba(255, 255, 255, 1)*/
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,77 @@
+@charset 'UTF-8';
+html, body {
+    height: 100%;
+}
+
+.static {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background-color: red;
+    text-align: center;
+    color: white;
+    top: 50px;
+    left: 50px;
+    bottom: 50px;
+}
+
+.box {
+    width: 250px;
+    height: 250px;
+    line-height: 250px;
+    color: wheat;
+    text-align: center;
+    font-size: 32px;
+    background-color: royalblue;
+}
+
+/* .box.rel {
+    position: relative;
+}
+
+.box.rel:nth-child(1) {
+    top: 50px;
+    background-color: goldenrod;
+    z-index: 0;
+}
+
+.box.rel:nth-child(2) {
+    top: -100px;
+    background-color: yellowgreen;
+    z-index: 0;
+} */
+
+.box.abs {
+    position: absolute;
+}
+
+.box.abs:nth-child(1) {
+    top: 100px;
+    left: 100px;
+    background-color: rebeccapurple;
+}
+
+.box.abs:nth-child(2) {
+    top: 150px;
+    left: 150px;
+    background-color: rosybrown;
+}
+
+.box.abs:nth-child(3) {
+    top: 200px;
+    left: 200px;
+    background-color: tomato;
+}
+
+.box.abs:nth-child(4) {
+    top: 250px;
+    left: 250px;
+    background-color: olivedrab;
+}
+
+.box.abs:nth-child(5) {
+    top: 300px;
+    left: 300px;
+    background-color: paleturquoise;
+    z-index: -1;
+}

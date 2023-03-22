@@ -1,0 +1,36 @@
+@charset 'UTF-8';
+/* * { margin: 0; padding: 0; } */
+/* ul,ol { list-style: none;}
+a { text-decoration: none; color: #666666; }
+
+span {color: red;}
+
+p {color: goldenrod;} */
+
+/* 구조선택자 */
+/* p:nth-child(5) {color: green;} */
+/*짝수*/
+/* p:nth-child(2n) {color: blueviolet;} */
+/* p:nth-child(even) {color: aqua;} */
+/*홀수*/
+/* p:nth-child(2n+1) {color: blanchedalmond;} */
+/* p:nth-child(odd) {color: azure;} */
+/* p:nth-last-child(2) {color: royalblue;} */
+/* div:nth-child(9) {color: yellow;} */
+
+/* 형태구조 선택자 */
+/* span:nth-of-type(1) {color: blue;}
+p:nth-of-type(4) {color: rebeccapurple;}
+div:nth-of-type(3) {color: aquamarine;}
+div:nth-last-of-type(3) {color: greenyellow;}
+div:nth-child(1) {color: brown;}
+
+#container div:nth-of-type(2) {color: aliceblue;} */
+
+/* 다중클래스 표기법 */
+/* 클래스의 표기가 디테일할수록 우선순위가 높다 */
+/* .box.blue {color: pink;}
+
+.box {color: red;}
+.blue {color: blue;}
+.number {font-size: 24px;} */
