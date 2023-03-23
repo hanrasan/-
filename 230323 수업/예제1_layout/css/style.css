@@ -1,0 +1,145 @@
+@charset 'UTF-8';
+html,body { height: 100%; }
+/* 상단영역 */
+#header {
+    /* background-color: red; */    
+    border-bottom: 1px solid red;
+    /* border-width: 1px;
+    border-style: solid;
+    border-color: red; */
+    padding: 0 30px;
+}
+
+/* 
+실습:
+ #gnb ul li를 float 사용하여 정렬해주세요.
+*/
+#gnb {
+    overflow: hidden;
+}
+
+#gnb ul {
+    overflow: hidden;
+    float: right;
+}
+
+#gnb ul li {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    /* margin-left: 20px; */
+    margin-right: 20px;
+}
+
+/*
+실습:
+#gnb ul li의 첫번째 요소의 왼쪽 마진 값을
+'0'으로 변경하시오.
+*/
+
+/* #gnb ul li:nth-child(1) {
+    margin-left: 0;
+} */
+
+/* #gnb ul li:first-child {
+    margin-left: 0;
+} */
+
+/* #gnb ul li:nth-last-child(1) {
+    margin-right: 0;
+}  */
+
+#gnb ul li:last-child {
+    margin-right: 0;
+}
+
+#gnb ul li a {
+    display: inline-block;
+    height: 60px;
+    width: 100%;
+    /* background-color: red; */
+}
+
+/* 본문 */
+/* 
+실습:
+#container를 너비 1200px 높이 500px의 레이아웃으로
+변경하고 문서의 가운데(x축) 정렬하시오.
+*/
+#container {
+    width: 1200px;
+    min-height: 500px;
+    margin: 0 auto;
+}
+
+/*
+실습:
+h2 요소의 하단에  너비가 1px인 실선을 red색상으로
+추가하시오.
+상단 여백 30px
+하단 여백 15px
+*/
+#container h2 {
+    text-align: center;
+    border-bottom: 1px solid red;
+    padding: 30px 0 15px;
+    /* padding-top: 30px;
+    padding-bottom: 15px; */
+    text-transform: uppercase;/*대문자: uppercase, 소문자: lowercase, 첫글자 대문자: capitalize, */
+    margin-bottom: 15px;/*마진 중첩현상 주의!!*/
+}
+
+/*
+실습:
+- items 정렬하기 -
+4분할 items 영역으로 배치하고 높이는 100px
+테두리는 1px 실선 red로 추가,
+좌우 내부 여백 20px 상하 내부 여백 10px
+items간 간격 10px
+테두리의 너비는  items 요소의 너비에 포함
+*/
+#container section {
+    overflow: hidden;
+}
+
+#container section .items {
+    float: left;
+    width: calc( 25% - 10px );
+    min-height: 100px;
+    border: 1px solid red;
+    padding: 10px 20px;
+    margin: 0 5px 15px;
+    box-sizing: border-box;
+    /* background-color: green; */
+}
+
+/* #container section {
+    overflow: hidden;
+    margin-right: -10px;
+}
+
+#container section .items {
+    float: left;
+    width: calc( 25% - 10px );
+    border: 1px solid red;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    background-color: green;
+} */
+
+
+/* 하단영역 */
+#footer {
+    margin-top: 50px;
+    text-align: center;
+    /* background-color: red; */
+}
+
+#footer .inner {
+    width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid red;
+    /* background-color: blue; */
+}

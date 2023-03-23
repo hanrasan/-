@@ -1,0 +1,47 @@
+css 우선순위
+1. !important
+2. inline 방식 (태그에 직접입력): script
+3. id(표기법 : #)
+4. class, 추가클래스, 가상선택자
+5. 태그요소
+6. 상속
+
+
+display:
+block: 
+가운데 정렬조건 :  너비고정, margin: 0 auto;
+
+inline: 글자, 자동여백(5~6px)
+여백 삭제 방법:
+1. float: left
+2. margin-left: -6px;
+3. 부모요소에 font-size: 0;
+
+inline-block
+
+
+position:
+위치 조정
+1. static (정적 위치): 위치 이동이 불가, default
+2. relative (상대적 위치): 
+위치 이동 가능, 초기위치영역(static)을 그대로 유지한다.
+3. absolute (절대적 위치):
+부모요소를 기준으로 상대적으로 움직인다.
+부모요소의 조건 : static이 아닌 position
+초기위치영역(static)을 버림
+4. fixed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
