@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>네이버 : 회원가입</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <form action="">
+        <div>
+            <span><strong>아이디</strong></span>
+            <section>
+                <input type="text" name="user-id" id="user-id">
+                <span>@naver.com</span>
+            </section>
+            <span><strong>비밀번호</strong></span>
+            <section>
+                <input type="text" name="user-pw" id="user-pw">
+            </section>
+            <span><strong>비밀번호 재확인</strong></span>
+            <section>
+                <input type="text" name="user-pw-check" id="user-pw-check">
+            </section>
+        </div>
+        <div>
+            <span><strong>이름</strong></span>
+            <section>
+                <input type="text" name="user-name" id="user-name">
+            </section>
+            <span><strong>생년월일</strong></span>
+            <section>
+                <input type="text" name="user-birth-year" id="user-birth-year" placeholder="년(4자)" pattern="[0-9]{4}"
+                    maxlength="4">
+                <select name="user-birth-month" id="user-birth-month">
+                    <option value="" selected>월</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                    <option value="">7</option>
+                    <option value="">8</option>
+                    <option value="">9</option>
+                    <option value="">10</option>
+                    <option value="">11</option>
+                    <option value="">12</option>
+                </select>
+                <input type="text" name="user-birth-day" id="user-birth-day" placeholder="일" pattern="[0-9]{2}"
+                    maxlength="2">
+            </section>
+            <span><strong>성별</strong></span>
+            <select name="sexual" id="sexual">
+                <option value="" selected>성별</option>
+                <option value="">남자</option>
+                <option value="">여자</option>
+                <option value="">선택 안함</option>
+            </select>
+            <div>
+                <span><strong>본인 확인 이메일</strong><sub>(선택)</sub></span>
+                <section>
+                    <input type="text" name="user-name" id="user-name">
+                </section>
+            </div>
+        </div>
+        <div>
+            <h3>
+                <label for="phoneNo">휴대전화</label>
+            </h3>
+            <div>
+                <select name="nationNo" id="nationNo">
+                    <option value="+82">대한민국 +82</option>
+                </select>
+            </div>
+            <div>
+                <span>
+                    <input type="tel" name="phoneNo" id="phoneNo" placeholder="전화번호 입력" maxlength="16">
+                    <label for="phoneNo">
+                    </label>
+                </span>
+                <button>인증번호 받기</button>
+            </div>
+            <div>
+                <input type="tel" id="authNo" name="authNo" placeholder="인증번호 입력하세요" disabled maxlength="4">
+                <label for="authNo">
+                    <span>인증받은 후 인증번호를 입력해야 합니다.</span>
+                    <span id="authNo" style="display: none;"></span>
+                </label>
+            </div>
+        </div>
+        <div>
+            <button type="button" id="btnJoin">
+                <span>가입하기</span>
+            </button>
+        </div>
+    </form>
+</body>
+
+</html>

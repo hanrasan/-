@@ -1,0 +1,55 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+html,
+body { height: 100%; }
+
+body {
+    background-color: black;
+}
+
+#wrap {
+    display: flex;
+    /* flex-direction: row; default */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#wrap:before {
+    content: 'wide pc';
+    font-size: 2rem;
+    color: white;
+}
+
+/* 0 ~ 1200px */
+@media screen and ( max-width: 1200px ) {
+    body { background-color: red;}
+    #wrap:before {
+        content: 'middle pc';
+    }
+}
+
+/* 0 ~ 1024px */
+@media screen and ( max-width: 1024px ) {
+    body { background-color: blue;}
+    #wrap:before {
+        content: 'desktop pc, small pc, laptop';
+    }
+}
+
+/* 0 ~ 768px */
+@media screen and ( max-width: 768px ) {
+    body { background-color: green;}
+    #wrap:before {
+        content: 'pad, tablet pc';
+    }
+}
+
+/* 0 ~ 380px */
+@media screen and ( max-width: 380px ) {
+    body { background-color: yellow;}
+    #wrap:before {
+        content: 'mobile';
+    }
+}

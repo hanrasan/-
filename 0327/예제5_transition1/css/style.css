@@ -1,0 +1,23 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+html,
+body {
+    height: 100%;
+}
+
+div {
+    width: 300px;
+    height: 300px;
+    background-color: rebeccapurple;
+    transition: 0.3s;
+    /* transition-property: width,background-color; */
+    /* transition-duration: 1.5s; */
+    /* transition-delay: 1s; */
+    /* transition-timing-function: ease-in-out; */
+}
+
+div:hover {
+    width: 150px;
+    background-color: gainsboro;
+}

@@ -1,0 +1,31 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+html,
+body { height: 100%; }
+
+.box {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.box.box1 {
+    width: 30vw;
+}
+
+.box.box2 {
+    width: 60vw;
+    background: greenyellow;
+}
+
+.box.box4 {
+    height: 50vw;
+    background-color: yellow;
+}
+
+.box.box5 {
+    height: 30vh;
+    background-color: rebeccapurple;
+}

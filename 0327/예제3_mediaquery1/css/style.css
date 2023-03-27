@@ -1,0 +1,88 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+html,
+body { height: 100%; }
+
+/* .table {
+    display: table;
+}
+.table .items {
+    display: table-cell;
+} */
+
+body { background-color: red; }
+
+#wrap {
+    /* display종류 inline, block, inline-block, table, flex */
+    display: flex;
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    align-items: center;
+    /* background-color: rebeccapurple; */
+    height: 100vh;
+}
+
+/* #wrap > div:nth-child(even) {
+    background-color: red;
+}
+
+#wrap >div:nth-child( odd ) {
+    background-color: green;
+} */
+
+/* #wrap:before {
+    content: 'test';
+} */
+
+#wrap:after {
+    content: 'red';
+    /* 기본 html 설정 16px 의 2배 */
+    font-size: 2rem;
+    color: white;
+}
+
+@media screen and ( max-width: 992px ) {
+    body { background-color: green;}
+    #wrap:after {
+        content: 'green';
+    }
+}
+
+@media screen and ( max-width: 600px ) {
+    body { background-color: blue;}
+    #wrap:after {
+        content: 'blue';
+    }
+}
+
+/*
+실습:
+320px 보다 크고 450px 보다 작은 영역을
+mediaquery로 구간을 정의하고
+html 의 font-size: 10px
+body 색상을 violet
+텍스트 -> violet
+*/
+/* @media screen and ( max-width: 450px ) and ( min-width: 320px ) {
+    html {font-size: 10px;}
+    body {
+        background-color: violet;
+    }
+    #wrap:after {
+        content: 'violet';
+    }
+} */
+
+/*
+    가로형 화면: 너비가 높이보다 큰 화면
+*/
+@media screen and ( orientation: landscape ) {
+    body {background-color: black;}
+}
+
+@media screen and ( orientation: portrait ) {
+    body {background-color: yellow;}
+}

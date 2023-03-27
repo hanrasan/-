@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=3, minimum-scale=0.5">
+    <title>mobile</title>
+    <!-- 초기화 코드 -->
+    <link rel="stylesheet" href="./css/initial.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <script src="./js/prefix.js"></script> -->
+</head>
+
+<body>
+    <input type="checkbox" id="toggle">
+    <div id="wrap">
+        <!-- 상단 햄버거 버튼 -->
+        <label for="toggle" id="toggle-btn">
+            <span></span><span></span><span></span>
+        </label>
+        <header>
+            <!-- 로고 영역 -->
+            <h1 id="logo"><a href="#">mobile</a></h1>
+            <nav id="gnb">
+                <label for="toggle" id="gnb-close-btn">close</label>
+                <ul>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                    <li><a href="#">menu4</a></li>
+                    <li><a href="#">menu5</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="container">
+            <form>
+                <ul>
+                    <li>
+                        <input type="text" id="user-id" name="user-id" required>
+                        <label for="user-id">ID</label>
+                    </li>
+                    <li>
+                        <input type="text" id="user-pw" name="user-pw" required>
+                        <label for="user-pw">PW</label>
+                    </li>
+                </ul>
+                <div class="btn-group">
+                    <button type="submit" class="btn violet">login</button>
+                    <button type="button" class="btn">sign up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

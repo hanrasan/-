@@ -1,0 +1,99 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+html,
+body {
+    height: 100%;
+}
+
+#graph {
+    width: 610px;
+    border: 3px solid black;
+}
+
+.bar {
+    width: 10px;
+    height: 50px;
+    background-color: orange;
+    transition-duration: 1s;
+    transition-property: width, background-color;
+    /* transition: 5s 1s width background-color ease; */
+}
+
+/*
+실습:
+#graph 요소에 마우스를 올렸을때
+모든 .bar의 너비를 5s 동안 600px 변화시키시오.
+*/
+#graph:hover .bar{
+    width: 600px;
+}
+
+/*
+실습:
+1초마다 그래프가 변화 되도록 스타일 코드를 작성하시오.
+1. 시간대비 변화 : linear
+2. 시간대비 변화 : ease
+3. 시간대비 변화 : ease-in
+4. 시간대비 변화 : ease-in-out
+5. 시간대비 변화 : ease-out
+*/
+
+#graph:hover .bar:nth-of-type(1){
+    transition-timing-function: linear;
+}
+
+#graph:hover .bar:nth-of-type(2){
+    transition-timing-function: ease;
+    transition-delay: 1s;
+}
+
+#graph:hover .bar:nth-of-type(3){
+    transition-timing-function: ease-in;
+    transition-delay: 2s;
+}
+
+#graph:hover .bar:nth-of-type(4){
+    transition-timing-function: ease-in-out;
+    transition-delay: 3s;
+}
+
+#graph:hover .bar:nth-of-type(5){
+    transition-timing-function: ease-out;
+    transition-delay: 4s;
+}
+
+/*
+실습:
+#graph 요소에 마우스를 올렸을때 변화:
+1. 너비: 100px, 배경색: red
+1. 너비: 300px, 배경색: blue
+1. 너비: 400px, 배경색: green
+1. 너비: 200px, 배경색: yellow
+1. 너비: 400px, 배경색: pink
+*/
+
+#graph:hover .bar:nth-of-type(1){
+    width: 100px;
+    background-color: red;
+}
+
+#graph:hover .bar:nth-of-type(2){
+    width: 300px;
+    background-color: blue;
+}
+
+#graph:hover .bar:nth-of-type(3){
+    width: 400px;
+    background-color: green;
+}
+
+#graph:hover .bar:nth-of-type(4){
+    width: 200px;
+    background-color: yellow;
+}
+
+#graph:hover .bar:nth-of-type(5){
+    width: 400px;
+    background-color: pink;
+}
