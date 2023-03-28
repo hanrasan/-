@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>변수선언</title>
+    <link rel="stylesheet" href="">    
+</head>
+
+<body>
+    <script>
+        var _x, _y, _total;
+        _x = 10;
+        _y = 5;
+
+        // console.log('계산 전 _x의 값 : ' + _x);
+        // console.log('계산 전 _y의 값 : ' + _y);
+
+        // 계산 합계
+        // _x에 합계를 재할당
+        _x = _x + _y;
+
+        // console.log('계산 후 _x의 값 : ' + _x);
+
+        // 복합 대입 연산
+        _x += _y;
+        _x -= _y;
+        // _x = 15
+        _x -= _y + _y;
+        // => _x = _x - ( _y + _y )
+
+        // console.log('복합 대입 연산에 의한 _x의 결과값 : ' + _x);
+
+        // var score = new Array();
+        var score = [85, 90, 95, 100, 75];
+        console.log(score);
+        console.log(score.length);
+        console.log(score[0]);
+        /*
+        실습:
+        위 값을 활용하여 평균을 구하는 식을 작성하고
+        console.log에 출력하시오.
+        출력 문구
+        '평균 점수는 **점 입니다.'
+        */
+        var result = (score[0] + score[1] + score[2] + score[3] + score[4]) / score.length;
+        console.log(`평균 점수는 ${result}점 입니다.`);
+
+        // console.log(document);
+        // document.write('<div>test</div>');
+        // document.body.innerHTML = '<div>inner HTML</div>';
+
+        var list = '<ul>';
+            list += '<li>1</li>';
+            list += '<li>2</li>';
+            list += '<li>3</li>';
+            list += '<li>4</li>';
+            list += '<li>5</li>';
+            // list = list + '</ul>';
+            list += '</ul>';
+
+            // console.log(list);
+
+            // document.body.innerHTML = list;
+            document.body.innerText = list;
+    </script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

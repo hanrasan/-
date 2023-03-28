@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>과일 포장 로직</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        // 시간 체크하기
+        /*
+        실습:
+        11시 이전 아침식사, 11시부터 3시까지 점심식사, 3시이후 저녁식사
+        '아침 먹을 시간입니다.'
+        '점심 먹을 시간입니다.'
+        '저녁 먹을 시간입니다.'
+
+        date객체를 사용하고,
+        if(조건문) -> 2개만 사용하여 위 로직을 작성하시오.
+        중첩 if 조건문을 사용
+        */
+
+        let date = new Date();
+        let hours = date.getHours();
+
+        if( hours > 11 ) {
+            if ( hours >= 15 ) {
+                alert('저녁');
+            } else {
+                alert('점심');
+            }
+        } else {
+            alert('아침');
+        };
+    </script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

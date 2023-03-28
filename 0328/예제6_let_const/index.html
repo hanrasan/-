@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>변수선언</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        // var, let, const
+        // 변수 선언
+        // 유효범위 함수
+        var numVar;
+        // 변수 값 할당 및 초기화
+        numVar = 10;
+        // 로직상 변수선언을 먼저 해주는것이 호이스팅
+        // numVar = 30;
+        // console.log(numVar);
+
+        // 변수 선언
+        // 유효범위 블럭
+        let numLet;
+        numLet = 10;
+        // 재할당
+        numLet = 20;
+        // let numLet = 50;
+        console.log(numLet);
+
+        const numConst = 50;
+        // numConst = 20;
+        // const numConst;
+        console.log(numConst);
+    </script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

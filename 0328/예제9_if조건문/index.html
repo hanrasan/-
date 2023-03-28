@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>입력값 비교 로직</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        let x = prompt('x값을 입력해주세요.', '');
+        let y = prompt('y값을 입력해주세요.', '');
+        let xChangeNum = Number(x);
+        let yChangeNum = Number(y);
+
+        alert('입력이 완료 되었습니다. x값은 ' + xChangeNum + ', y값은 ' + yChangeNum + '입니다.');
+
+        /*
+        실습:
+        아래 조건에 맞게 if 조건문을 작성하시오.
+        'x는 y와 같습니다.'
+        'x는 y보다 큽니다.'
+        'x는 y보다 작습니다.'
+        */
+
+        if(xChangeNum > yChangeNum) {
+            alert('x는 y보다 큽니다.');
+        } else if(xChangeNum == yChangeNum) {
+            alert('x는 y와 같습니다.');
+        } else {
+            alert('x는 y보다 작습니다.');
+        }
+    </script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

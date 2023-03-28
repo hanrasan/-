@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>변수선언</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        /*
+        실습:
+        나이 : 32,44,21,18,52,22,45,25,38,28
+        키 : 175,180,182,190,185,179,182,183,192,187
+
+        document 출력:
+
+        출력 구문:
+        ul li 를 사용하여 출력
+        '우리반 학생의 평균 나이는 ***살 입니다.'
+        '우리반 학생의 평균 키는 ***cm 입니다.'
+        */
+        var age = [32, 44, 21, 18, 52, 22, 45, 25, 38, 28];
+        var height = [175, 180, 182, 190, 185, 179, 182, 183, 192, 187];
+
+        var ageTotal = age[0] + age[1] + age[2] + age[3] + age[4] + age[5] + age[6] + age[7] + age[8] + age[9];
+        var ageAvg = ageTotal / age.length;
+
+        var heightTotal = height[0] + height[1] + height[2] + height[3] + height[4] + height[5] + height[6] + height[7] + height[8] + height[9];
+        var heightAvg = heightTotal / height.length;
+
+        // var list = '<ul>';
+        // list += '<li>우리반 학생의 평균 나이는 ';
+        // list += ageAvg;
+        // list += '살 입니다.</li>';
+        // list += '<li>우리반 학생의 평균 키는 ';
+        // list += heightAvg;
+        // list += 'cm 입니다.</li>';
+        // list += '</ul>';
+
+        var list = '<ul>';
+        list += '<li>우리반 학생의 평균 나이는 ' + ageAvg + '살 입니다.</li>';
+        list += '<li>우리반 학생의 평균 키는 ' + heightAvg + 'cm 입니다.</li>';
+        list += '</ul>';
+
+        document.body.innerHTML = list;
+    </script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

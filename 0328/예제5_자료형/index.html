@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>변수선언</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        // 자료형 확인하기
+        typeof('hello javascript');
+        // typeof( 내곧타 )의 자료형을 알려준다.
+        console.log(typeof('hello javascript'));
+        console.log(typeof(123));
+        console.log(typeof(true));
+        console.log(typeof(function(){}));
+        console.log(typeof({}));
+
+        // 문자열 조합
+        var stringVar = '50';
+        var numberVar = 10;
+        
+        console.log(stringVar + numberVar);
+        console.log(stringVar + ', ' + typeof(stringVar));
+        console.log(numberVar + ', ' + typeof(numberVar));
+        console.log(stringVar + numberVar + ', ' + typeof(stringVar + numberVar));
+    </script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

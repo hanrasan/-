@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 테스트</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        // confirm test
+        let inputText = confirm('회원가입 하시겠습니까?');
+        console.log(inputText);
+
+        /*
+        실습:
+        if 조건문을 사용하여 confirm의 리턴값에 따라
+        아래 구문을 출력하시오.
+        alert으로 출력:
+        확인 버튼을 눌렀을때 : '회원가입이 완료 되었습니다.'
+        취소 버튼을 눌렀을때 : '회원가입이 취소 되었습니다.'
+        */
+        if( inputText ) {
+            alert('회원가입이 완료 되었습니다.');
+        } else {
+            alert('회원가입이 취소 되었습니다.');
+        };
+    </script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

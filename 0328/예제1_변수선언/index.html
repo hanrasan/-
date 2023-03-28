@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>변수선언</title>
+    <link rel="stylesheet" href="">
+    <script>
+        // 변수 선언과 할당
+        // 변수 선언과 할당을 동시에 할 수 있다.
+        /*
+            멀티라인 주석 처리
+        */
+        // var num = 15;
+        // console.log(num);
+        // 변수 선언
+        // var num;
+        // // 변수 할당, 처음 할당 : 변수를 초기화한다.
+        // num = 20;
+        // console.log(num);
+        // // 재할당
+        // num = 30;
+        // console.log('재할당');
+        // console.log(num);
+        // 변수의 다중선언
+        var _sum1, _sum2, _sum3, _total;
+        _sum1 = 10;
+        _sum2 = 5;
+        _sum3 = 20
+
+        _total = _sum1 + _sum2 + _sum3;
+
+        // alert(_total);
+        // 문자 변수 조합 1
+        // console.log('합계는 ' + _total + '원 입니다.');
+        // 문자 변수 조합 2
+        // console.log(`합계는 ${_total}원 입니다.`);
+
+        // 원주율
+        var pi = 3.14159265;
+        var radius = 10;
+        // 결과값을 담을 수 있는 변수 선언
+        var result;
+
+        // 원둘레 : 2*pi*r
+        result = 2*pi*radius;
+        // console.log(result);
+
+        // 원넓이
+        result = pi*radius*radius;
+        // console.log(result);
+
+        // ********자료형의 종류*********
+        // 문자열 타입
+        var stringVar = 'string';
+        // var stringVar = '10';
+        // 숫자 타입
+        var numberVar = 10;
+        // true, false 값을 반환하는 bool타입
+        var booleanVar = true;
+        // 함수형 타입
+        var functionVar = function(){};
+        // 객체 타입
+        // 데이터의 덩어리, 일종의 만능기능
+        var objectVar = { /* 변수, 함수, key */ };
+
+        console.log(stringVar);
+        console.log(numberVar);
+        console.log(booleanVar);
+        console.log(functionVar);
+        console.log(objectVar);
+    </script>
+</head>
+<body>
+
+    <script src="./js/common.js"></script>
+</body>
+</html>

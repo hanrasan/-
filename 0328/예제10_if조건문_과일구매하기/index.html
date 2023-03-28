@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>과일 포장 로직</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        /*
+        총 보유금액: 10000원 
+        실습:
+        1. '사과의 가격은 얼마입니까?'
+        2. '배의 가격은 얼마입니까?'
+        
+        alert: '사과의 가격은 ***원이고 배의 가격은 ***원입니다. 총 지불금액은 ***원입니다.'
+        '가격이 비쌉니다. 에누리 해줘' 총 보유금액 < 총 지불금액
+        '가격이 쌉니다. 포장 해줘' 총 보유금액 > 총 지불금액
+        '그냥 줘' 총 보유금액 == 총 지불금액
+        */
+        let money = 10000;
+        
+        let apple = prompt('사과의 가격은 얼마입니까?', '');
+        let pear = prompt('배의 가격은 얼마입니까?', '');
+
+        let appleNum = Number(apple);
+        let pearNum = Number(pear);
+        
+        // 변수에 바로 재정의해서 변수 줄임
+        // apple = Number(apple);
+        // pear = Number(pear);
+
+        let pay = appleNum + pearNum;
+
+        alert('사과의 가격은 ' + appleNum + '원이고 배의 가격은 ' + pearNum + '원입니다.\n'
+        + '총 지불금액은 ' + pay + '원입니다.');
+
+        if( money - pay < 0 ) {
+            alert('비싸');
+        }else if( money - pay == 0 ) {
+            alert('비싸지만 포장해줘');
+        }else {
+            alert('포장해줘');
+        }
+    </script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

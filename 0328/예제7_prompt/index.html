@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>변수선언</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        // number string prompt text
+        // var inputText = prompt('숫자를 입력해주세요', '숫자');
+        // var num = 10;
+        // console.log(typeof(inputText));
+        // var changeNumber = Number(inputText);
+        // changeNumber += num;
+        // console.log(typeof(changeNumber));
+        // console.log(changeNumber);
+
+        // prompt로 반지름 값을 입력받고 원의 둘레를 구하는 로직을 작성하시오.
+        // var pi = 3.141592;
+        // var inputText = prompt('반지름의 길이를 입력하시오.', '반지름 길이');
+        // var radius = Number(inputText);
+        // var result = 2*pi*radius;
+        // console.log('반지름 '+ radius + '인 원의 둘레는 ' + result);
+        
+        const pi = 3.141592;
+        let inputText = prompt('반지름을 입력해주세요.', '숫자');
+        let radiusNum = Number(inputText);
+        let circle;
+        circle = 2*parseFloat(pi)*radiusNum;
+        console.log('반지름 '+ radiusNum + '인 원의 둘레는 ' + circle + '입니다.');
+
+    </script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>
