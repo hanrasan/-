@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>과일 재고 확인하기</title>
+    <link rel="stylesheet" href="">
+    <script>
+        window.onload = function () {
+            // var element =  document.getElementById('box')
+            // 이벤트 리스너 함수 타입 사용방법 1 : 선언적 함수
+            // function getElemNum() {
+            //     document.getElementById('box').innerHTML = 'test';
+            // }
+            // document.getElementById('btn').addEventListener('click',getElemNum)
+            // addEventListener(a,b,c)
+            // a매개변수 : string 타입 이벤트명을 넣어준다.
+            // b매개변수 : function 타입 함수명을 넣어준다. 주의! 실행구문()으로 넣지않는다.
+            // c매개변수 : boolean 타입 입력 즉, true or false, default: false
+
+            // 이벤트 리스너 함수 타입 사용방법 2 : 익명 함수
+            // document.getElementById('btn').addEventListener('click',function() {
+            //     document.getElementById('box').innerHTML = 'test';
+            // })
+
+            function clickBtn(btn, element, text) {
+                var btnSelect = document.getElementById(btn);
+                var elemSelect = document.getElementById(element);
+                btnSelect.addEventListener('click', function() {
+                    elemSelect.innerHTML = text;
+                })
+            }
+
+            clickBtn('btn', 'box', '안녕하세요.');
+            clickBtn('btn2', 'box2', '이벤트리스너입니다.');
+        }
+        // function getElemNum() {
+        //     document.getElementById('box').innerHTML = 'test';
+        // }
+        // var element = document.getElementById('box')
+        // console.log(element);
+    </script>
+</head>
+
+<body>
+    <div id="box">box area</div>
+    <div id="btn">click</div>
+
+    <div id="box2">box area</div>
+    <div id="btn2">click</div>
+    <!-- <div id="btn" onclick="getElemNum()">click</div> -->
+    <script></script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

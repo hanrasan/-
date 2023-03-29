@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>익명 함수</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        // 변수선언
+        // console.log(arrayFruit[1]);
+        // var arrayFruit = [ ['반바지', '슬랙스'], '배', '수박', '포도', '레몬'];
+        // console.log(arrayFruit[0][1]);
+        // var inputText = prompt('과일을 입력해주세요.', '과일 ^^');
+        var arrayFruit = ['사과', '배', '수박', '포도', '레몬'];
+        var count = 0;
+        
+        /*
+        push, pop 은 배열의 마지막 요소를 조종한다.
+        push 는 배열의 마지막 요소에 추가
+        pop 은 배열의 마지막 요소를 제거, 제거된 요소를 리턴
+        */
+        // console.log(inputText);
+        // arrayFruit.push(inputText);
+        // console.log(arrayFruit);
+        // var returnFruit = arrayFruit.pop();
+        // console.log(arrayFruit);
+        // console.log(returnFruit);
+
+        /*
+        shift 는 배열의 첫번째 요소를 제거, 제거된 요소를 리턴한다.
+        unshift 는 배열의 첫번째 요소에 추가
+        */
+        // arrayFruit.shift();
+        // console.log(arrayFruit);
+        // arrayFruit.unshift('샤인머스켓');
+        // console.log(arrayFruit);
+
+    //    arrayFruit.splice(1,2,값);
+        /*
+        첫번째 매개변수: 추가할 위치
+        두번째 매개변수: 해당 위치에서 삭제할 값의 개수
+        세번째 매개변수: 추가될 값
+        */
+        // arrayFruit.splice(0,0,'키위');
+        // console.log(arrayFruit);
+        // arrayFruit.splice(2,1,'귤');
+        // console.log(arrayFruit);
+
+        // alert('총 과일 개수는 ' + arrayFruit.length + '개 입니다.');
+
+        // 재귀함수: 하나의 함수를 반복하여 작동하는 함수
+        function checkFunc(arrayNum) {
+            console.log(arrayNum.length);
+            if( count < arrayNum.length ) {
+                alert(arrayNum[count]);
+            } else {
+                alert('더 이상 과일이 없습니다.');
+                return false;
+            }
+            count++;
+            checkFunc(arrayNum);
+        }
+
+        checkFunc(arrayFruit);
+    </script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

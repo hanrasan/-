@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트리스너2</title>
+    <link rel="stylesheet" href="">
+    <script>
+        window.onload = function () {
+            // 이름 리스트
+            let outputText = '';
+            // 이름 리스트의 목록 체크
+            var fill = false;
+            function getText() {
+                const elem = document.getElementById('fname');
+                const outputElem = document.getElementById('textarea');
+                if( elem.value != '') {
+                    // 초기상태: 리스트의 목록이 없는 상태
+                    if (fill == false) {
+                        fill = true;
+                        outputText += elem.value;
+                    } else {
+                        outputText += '<br>' + elem.value;
+                    }
+                }
+
+                // console.log(outputText);
+                outputElem.innerHTML = outputText;
+            }
+
+            // add css style
+            document.getElementById('textarea').style.backgroundColor = 'red';
+
+
+            document.getElementById('btn').addEventListener('click', getText);
+        }
+    </script>
+</head>
+
+<body>
+    Input your name: <input type="text" id="fname">
+    <div class="textarea-wrap">
+        My name is: <div id="textarea"></div>
+    </div>
+    <button id="btn">이름추가</button>
+    <script></script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

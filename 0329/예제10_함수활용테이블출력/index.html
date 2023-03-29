@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>함수활용 테이블 출력</title>
+    <link rel="stylesheet" href="">
+    <style>
+        .table-wrap {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .table-wrap table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        .table-wrap table td,
+        .table-wrap table th {
+            border: 1px solid black;
+        }
+
+        .table-wrap table th {
+            /* background-color: #f9f9f9; */
+            background-color: skyblue;
+            color: white;
+            height: 36px;
+            line-height: 36px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="table-wrap-id" class="table-wrap"></div>
+    <button id="getinfo">개인정보가져오기</button>
+    <script>
+        let nameNum = ['홍길동', '김길동', '이길동', '박길동', '최길동'];
+        let ageNum = [30, 18, 21, 35, 38];
+        let height = [175, 180, 190, 185, 178];
+        let score = [85, 88, 90, 95, 95];
+
+        function avgFunc(arrayNum) {
+            var total = 0;
+            var scoreLeng = arrayNum.length;
+            var scoreAvg;
+            for (let i = 0; i < scoreLeng; i++) {
+                total += arrayNum[i];
+            }
+            return scoreAvg = total / scoreLeng;
+        }
+
+        let listHtml = '<table>';
+        listHtml += '<tr><th>이름</th><th>나이</th><th>키</th><th>점수</th></tr>';
+        // for (let i = 0; i < nameNum.length; i++) {
+        //     listHtml += '<tr><td>' + nameNum[i] + '</td><td>'
+        //         + ageNum[i] + '</td><td>'
+        //         + height[i] + '</td><td>'
+        //         + score[i] + '</td></tr>';
+        // }
+        for (i in nameNum) {
+            listHtml += '<tr><td>' + nameNum[i] + '</td><td>'
+                + ageNum[i] + '</td><td>'
+                + height[i] + '</td><td>'
+                + score[i] + '</td></tr>';
+        }
+        listHtml += '<tr><th>평균</th><th>'
+            + avgFunc(ageNum) + '</th><th>'
+            + avgFunc(height) + '</th><th>'
+            + avgFunc(score) + '</th></tr>';
+        listHtml += '</table>';
+
+        function listOutput() {
+            // document.getElementById('table-wrap-id').innerHTML = listHtml;
+            document.getElementsByClassName('table-wrap')[0].innerHTML = listHtml;
+            console.log(document.getElementsByClassName('table-wrap'));
+        }
+
+        document.getElementById('getinfo').addEventListener('click',listOutput);
+    </script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

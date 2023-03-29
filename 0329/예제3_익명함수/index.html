@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>익명 함수</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        // 함수 선언
+        // 즉시 실행 함수
+        // (function() {})()
+        // (function() {
+        //     console.log('나는 즉시 실행 함수입니다.');
+        // })()
+        
+        function repeat() {
+            console.log('나는 선언적 함수입니다.');
+        }
+
+        var repeat = function() {
+            console.log('나는 익명함수입니다.');
+        }
+
+        // repeat();
+        // console.log(typeof(repeat));
+
+        /*
+        메모:
+        호이스팅 순서상
+        변수 repeat선언, 함수 repeat선언
+        변수 repeat재할당
+        따라서, 변수 repeat이 실행됨
+
+        -강의-
+        함수를 호출하면 익명함수가 실행된다.
+        이유:
+        선언적 함수가 먼저 생성되고,
+        익명함수가 나중에 생성되기 때문이다.
+        */
+
+        // arrow function 표기
+        var arrowFunc = () => {
+            alert('나는 화살표 함수입니다.');
+        }
+        arrowFunc();
+    </script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

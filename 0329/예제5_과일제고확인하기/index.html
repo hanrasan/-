@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>과일 재고 확인하기</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        /*
+        실습:
+        1. 프롬프트로 과일 입력받기
+            프롬프트 구문 : '과일을 입력해주세요.'
+        2. 재고 내용을 배열로 구성하시오.
+            '사과', '배', '수박', '포도'
+        3. 경고창을 띄운다.
+            '총 과일의 개수는 ***개 입니다.'
+        4. 경고창, '검색하신 ***는 재고가 있습니다.'
+        5. 구매 의사 확인 confirm
+            '구매하시겠습니까?'
+        6. 확인 : '구매가 완료 되었습니다.'
+           취소 : '구매가 취소 되었습니다.'
+        */
+
+        const arrayFruit = ['사과', '배', '수박', '포도'];
+        const inputText = prompt('과일을 입력해주세요.', '과일명');
+        let count = 0;
+        function checkFunc(arrayNum) {
+            if( count < arrayNum.length ) {
+                if( inputText == arrayNum[count] ) {
+                    alert('검색하신 ' + arrayNum[count] + '는 재고가 있습니다.');
+                    let checkBuy = confirm('구매하시겠습니까?');
+                    if( checkBuy ) {
+                        alert('구매가 완료되었습니다.');
+                    } else {
+                        alert('구매가 취소되었습니다.');
+                    }
+                }
+                count++;
+                checkFunc(arrayNum);
+            }
+            // for( let i = 0; i < arrayNum.length; i++ ) {
+            //     if( inputText == arrayNum[i] ) {
+            //         alert('검색하신 ' + arrayNum[i] + '는 재고가 있습니다.');
+            //         let checkBuy = confirm('구매하시겠습니까?');
+            //         if( checkBuy ) {
+            //             alert('구매가 완료되었습니다.');
+            //         } else {
+            //             alert('구매가 취소되었습니다.');
+            //         }
+            //     }
+            // }
+        }
+
+        alert('총 과일의 개수는 ' + arrayFruit.length + '개 입니다.');
+        checkFunc(arrayFruit);
+
+
+
+
+
+        // var findFruit = prompt('찾으시는 과일을 입력해주세요.', '과일 :)');
+        // var fruit = ['사과', '배', '수박', '포도'];
+        // var count = 0;
+
+        // function findFruitFunc(wantFruit) {
+        //     if (count < fruit.length) {
+        //         if (wantFruit == fruit[count]) {
+        //             alert('총 과일의 개수는 ' + fruit.length + '개 입니다.');
+        //             alert('검색하신 ' + wantFruit + '는 재고가 있습니다.');
+        //             var buy = confirm('구매하시겠습니까?');
+        //             if (buy) {
+        //                 alert('구매가 완료 되었습니다.');
+        //             } else {
+        //                 alert('구매가 취소 되었습니다.');
+        //             }
+        //         }
+        //     } else {
+        //         alert('검색하신 ' + wantFruit + '는 재고가 없습니다.');
+        //         return 0;
+        //     }
+        //     count++;
+        //     findFruitFunc(wantFruit);
+        // }
+
+        // if(findFruit != null) {
+        //     if(isNaN(findFruit)) {
+        //         findFruitFunc(findFruit);
+        //     } else {
+        //         alert('옳바른 과일 이름을 입력해 주십시오.');
+        //     }
+        // } else {
+        //     alert('취소되었습니다.');
+        // }
+
+    </script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

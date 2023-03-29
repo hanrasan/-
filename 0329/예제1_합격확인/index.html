@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>학점 확인</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        var score = prompt('학점을 입력해주세요.', '숫자');
+        var interval = [4.3, 3.9, 3.5, 3.2, 2.9, 2.5, 2.2, 1.9, 1.5, 1.2, 0.9, 0.1];
+        var grade = ['A+','A0','A-','B+','B0','B-','C+','C0','C-','D+','D0','D-'];
+
+        if (score == null) {
+            alert('학점 입력을 취소하였습니다.');
+        } else {
+            if (score == '숫자' || score == '') {
+                alert('입력된 숫자가 없습니다.');
+            } else if (isNaN(score)) {
+                alert('영문자/한글/특수문자는 사용할 수 없습니다. 숫자를 입력해주세요.');
+            } else {
+                score = Number(score);
+                if (score >= 0 && score <= 4.5) {
+                    var scoreGrade;
+                    for (let i = 0; i < interval.length; i++) {
+                        if(score >= interval[i]) {
+                            scoreGrade = grade[i];
+                        }
+                        break;
+                    }
+                    if (score > 0) {
+                        alert(`당신의 학점은 ${scoreGrade} 입니다.`);
+                    } else {
+                        alert('F: 재수강 신청하세요.');
+                    }
+                } else {
+                    alert('학점을 다시 입력해주세요.');
+                }
+            }
+        };
+    </script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

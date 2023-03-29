@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>학점 확인</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        // 변수 선언
+        var num = '';
+        var count = 0;
+        function repeat(i, j) {
+            if( count == 0 ) {
+                // 초기 실행시 ', ' 삭제
+                num += i;
+            } else if ( i > j ) {
+                // 마지막 숫자보다 작을때
+                return false;
+            } else {
+                num += ', ' + i;
+            }
+            console.log(num);
+            i++;
+            count++;
+            repeat(i, j);
+        }
+        // console.log(repeat(50,80));
+        repeat(50,80);
+    </script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>
