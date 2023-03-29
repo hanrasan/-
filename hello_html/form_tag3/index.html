@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>index</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="container">
+        <form action="">
+            <!-- <input type="text" id="text1" name="text1" minlength="4" maxlength="10" size="10"> -->
+            <input type="text" id="text1" name="text1" minlength="4" size="10">
+            <input type="radio" name="k"><span>여성</span>
+            <input type="radio" name="k"><span>남성</span><br>
+            <!-- check box label 사용법 -->
+            <label for="ch1">check</label><br>
+            <input type="checkbox" id="ch1"><br>
+            <!-- email -->
+            <span>email</span><input type="email">
+            <!-- search -->
+            <span>search</span><input type="search" required><!--required 필수 입력사항일때 사용 속성-->
+            <fieldset>
+                <legend>날짜관련 입력폼</legend>
+                <input type="date">
+                <input type="month">
+                <input type="week">
+                <input type="datetime-local" id="reservation-time" name="reservation-time" min="2023-03-21T12:50" max="2023-03-24T12:50">
+            </fieldset>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
+            <button type="submit">등록</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

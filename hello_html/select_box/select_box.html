@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>select box</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>select device</h1>
+    <form action="">
+        <!-- <select id="kindofdevice" name="kindofdevice">
+            <option value="phone">phone</option>
+            <option value="tablet" selected>tablet</option>
+        </select>
+        <select name="formpacter-phone" id="formfacter-phone" hidden>
+            <option value="iphone">iphone</option>
+            <option value="galaxy">galaxy</option>
+            <option value="googlephone">googlephone</option>
+        </select>
+        <select name="formpacter-tablet" id="formfacter-tablet">
+            <option value="ipad">ipad</option>
+            <option value="galaxytab">galaxytab</option>
+        </select> -->
+        <select id="kindofdevice" name="kindofdevice">
+            <optgroup label="phone">
+                <option value="iphone">iphone</option>
+                <option value="galaxy">galaxy</option>
+            </optgroup>
+            <optgroup label="tablet">
+                <option value="ipad">ipad</option>
+                <option value="galaxytab">galaxytab</option>
+            </optgroup>
+        </select>
+        <input type="number" id="amount" name="amount" min="1" max="10" step="1" value="1"><span>구매개수</span>
+        <button type="submit">구매하기</button>
+    </form>
+</body>
+</html>

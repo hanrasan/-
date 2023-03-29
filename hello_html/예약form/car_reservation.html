@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>car reservation</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>자동차 대여 계약</h1>
+    <div id="car-reservation">
+        <form action="" method="get">
+            <ul>
+                <li>
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" placeholder="8~12자 까지">
+                </li>
+                <li>
+                    <label for="count">인원</label>
+                    <select name="count" id="count">
+                        <!-- option*4[value=$]>{$} -->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </li>
+                <li>
+                    <!-- id : phone label과 input으로 구현, 항목이름 : 전화번호 -->
+                    <label for="phone">전화번호</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="000-0000-0000">
+                </li>
+                <li>
+                    <!-- email -->
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email">
+                </li>
+                <li>
+                    <label for="kindofcar">차종</label>
+                    <select name="kindofcar" id="kindofcar">
+                        <option value="1">티코</option>
+                        <option value="2">다마스</option>
+                        <option value="3">봉고르기니</option>
+                        <option value="4">무얼시를라고</option>
+                    </select>
+                </li>
+                <!--
+                    실습:
+                    예약날짜:
+                    id : resv
+                    구간: 2023-03-21 00:00:00 ~ 2023-03-24 00:00:00
+
+                    반납날짜:
+                    id : return
+                    구간: 2023-03-22 00:00:00 ~ 2023-03-24 00:00:00
+                -->
+                <li>
+                    <label for="resv">예약날짜</label>
+                    <input type="datetime-local" id="resv" name="resv" min="2023-03-21T00:00:00" max="2023-03-24T00:00:00">
+                </li>
+                <li>
+                    <label for="return">반납날짜</label>
+                    <input type="datetime-local" id="return" name="return" min="2023-03-22T00:00:00" max="2023-03-24T00:00:00">
+                </li>
+            </ul>
+            <button type="submit">예약하기</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>캠핑 예약 실습문제</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>캠핑장 대여 문의</h1>
+    <div id="camping-reservation">
+        <form action="" method="get">
+            <ul>
+                <li>
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" placeholder="이름을 입력해주세요.">
+                </li>
+                <li>
+                    <label for="phone">연락처</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="ex) 02-1234-5678">
+                </li>
+                <li>
+                    <label for="date-reservation">예약일</label>
+                    <input type="date" id="date-reservation" name="date-reservation">
+                </li>
+                <li>
+                    <label for="camp-type">캠핑장 유형</label>
+                    <select name="camp-type" id="camp-type">
+                        <option value="1">야외</option>
+                        <option value="2">실내</option>
+                        <option value="3">캠핑카</option>
+                        <option value="4">기타</option>
+                    </select>
+                </li>
+            </ul>
+            <button type="submit">문의하기</button>
+        </form>
+    </div>
+</body>
+</html>
