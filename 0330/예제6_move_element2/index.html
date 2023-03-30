@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Move Element</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="stop" onclick="stopMove()">stop</div>
+    <div class="box"></div>
+    <script>
+        /*
+        실습:
+
+        1) .box 요소를 setInterval 함수를 사용하여 두번째 매개변수의 값을
+        '10'으로하고 왼쪽에서 오른쪽으로 1px씩 이동하는 로직을 작성하시오.
+        
+        2) .stop 요소를 클릭할 경우 setInterval 함수를 종료하시오.
+        */
+
+        let elem = document.getElementsByClassName('box')[0];
+        let pos = 0;
+        let id = setInterval(frame, 1);
+
+        function frame(){
+            pos++;
+            elem.style.left = pos + 'px';
+        }
+
+        function stopMove(){
+            clearInterval(id);
+        }
+
+    </script>
+</body>
+
+</html>

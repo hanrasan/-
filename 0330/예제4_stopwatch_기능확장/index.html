@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="set-timer">0</div>
+    <div id="stop-watch-wrap">
+        <div id="stop-watch">0</div>
+        <div class="btn-group">
+            <button onclick="startCount()">start</button>
+            <button onclick="pauseCount()">pause</button>
+            <button onclick="resetCount()">reset</button>
+        </div>
+    </div>
+    <script>
+        // stop watch
+        // 시간을 담을 변수
+        let count = 0;
+        // settimeout 실행 함수를 담을 변수, 담는 이유는 clearsettimeout 을 위한 변수처리
+        let t;
+        let timerIsOn = 0;
+        let inputText = prompt('타이머 설정시간을 입력해주세요.');
+        inputText = Number(inputText);
+        document.getElementById('set-timer').innerHTML = inputText;
+
+        function timeCount() {
+            /*
+            실습:
+            설정된 시간과 count변수의 숫자가 같을 경우
+            settimeout을 리셋하는 로직을 작성하시오.
+
+            (count - 1) == inputText
+            */
+            // if( count == inputText + 1 ){
+            //     clearTimeout(t);
+            //     timerIsOn = 0;
+            //     count = 0;
+            //     document.getElementById('stop-watch').innerHTML = count;
+            //     alert('타이머 종료');
+            // } else {
+            //     document.getElementById('stop-watch').innerHTML = count;
+            //     // count++, count += 1
+            //     count = count + 1;
+            //     t = setTimeout(timeCount, 1000);
+            // }
+
+            if( count == inputText + 1 ){
+                clearTimeout(t);
+                timerIsOn = 0;
+                count = 0;
+                document.getElementById('stop-watch').innerHTML = count;
+                alert('타이머 종료');
+            } else {
+                document.getElementById('stop-watch').innerHTML = count;
+                // count++, count += 1
+                count = count + 1;
+                t = setTimeout(timeCount, 1000);
+            }
+        }
+
+        function startCount() {
+            if (timerIsOn !== 1) {
+                timerIsOn = 1;
+                timeCount();
+            }
+        }
+
+        function pauseCount() {
+            if (timerIsOn === 1) {
+                clearTimeout(t);
+                timerIsOn = 0;
+            }
+        }
+
+        function resetCount() {
+            clearTimeout(t);
+            timerIsOn = 0;
+            count = 0;
+            document.getElementById('stop-watch').innerHTML = count;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Set timeout 2</title>
+    <script src="" async=""></script>
+</head>
+<body>
+    <input type="text" id="txt">
+    <button onclick="timeText()">count start!</button>
+    <script>
+        // function timeText(){
+        //     let x = document.getElementById('txt');
+        //     setTimeout( function(){ x.value = "2초" }, 2000);
+        //     setTimeout( function(){ x.value = "4초" }, 4000);
+        //     setTimeout( function(){ x.value = "6초" }, 6000);
+        //     setTimeout( function(){ x.value = "8초" }, 8000);
+        // }
+
+        let count = 0;
+        let x = document.getElementById('txt');
+        function timeText(){
+            count += 1;
+            x.value = count + '초';
+            setTimeout( timeText, 1000 );
+        }
+
+    </script>
+</body>
+</html>

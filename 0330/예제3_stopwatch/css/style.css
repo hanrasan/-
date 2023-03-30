@@ -1,0 +1,46 @@
+@charset 'UTF-8';
+
+* { margin: 0; padding: 0; }
+
+html,
+body { height: 100%; }
+
+#stop-watch-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    min-height: 150px;
+    margin: 0 auto;
+}
+
+#stop-watch {
+    /* 숫자를 배치 용도 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: skyblue;
+    font-size: 36px;
+    color: white;
+}
+
+.btn-group {
+    /* 버튼 정렬 용도 */
+    display: flex;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+}
+
+.btn-group button {
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    padding: 0 20px;
+    outline: none;
+    border: 1px solid #ffffff;
+    background-color: black;
+}
+
+.btn-group button:last-child {
+    background-color: red;
+}

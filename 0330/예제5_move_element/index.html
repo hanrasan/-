@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Move Element</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <button onclick="moveElem">click move</button>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+    <script>
+    //     let t = setInterval(function(){
+    //         console.log('this is interval');
+    //     }, 1000)
+
+    //     function moveElem(){
+    //         clearInterval(t);
+    //     }
+
+    function moveElem(){
+        let elem = document.getElementById('animate');
+        let pos = 0;
+        let id = setInterval(frame, 10);
+
+        function frame(){
+            pos++; // POS = POS + 1;
+            elem.style.top = pos+'px';
+            elem.style.left = pos+'px';
+        }
+    }
+    </script>
+</body>
+
+</html>

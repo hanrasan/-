@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="stop-watch-wrap">
+        <div id="stop-watch">0</div>
+        <div class="btn-group">
+            <button onclick="startCount()">start</button>
+            <button onclick="stopCount()">stop</button>
+        </div>
+    </div>
+    <script>
+        // stop watch
+        // 시간을 담을 변수
+        let count = 0;
+        // settimeout 실행 함수를 담을 변수, 담는 이유는 clearsettimeout 을 위한 변수처리
+        let t;
+        let timerIsOn = 0;
+
+        function timeCount(){
+            document.getElementById('stop-watch').innerHTML = count;
+            // count++, count += 1
+            count = count + 1;
+            t = setTimeout(timeCount,1000);
+        }
+
+        function startCount(){
+            if( timerIsOn !== 1 ){
+                timerIsOn = 1;
+                timeCount();
+            }
+        }
+
+        function stopCount(){
+            if( timerIsOn === 1 ){
+                timerIsOn = 0;
+                clearTimeout(t);
+            }
+        }
+    </script>
+</body>
+</html>

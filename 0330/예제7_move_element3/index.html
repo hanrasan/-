@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Move Element</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="box" onclick="stop()"></div>
+    <script>
+
+        let elem = document.getElementsByClassName('box')[0];
+        let timerIsOn = 1;
+        // let move = 0;
+        let moveX = 0;
+        let moveY = 0;
+        // let direction = 1;
+        let directionX = 1;
+        let directionY = 1;
+        let moveInterval = setInterval(moveFunc, 5);
+
+        console.log(window.innerWidth);
+
+        // function moveFunc(){
+        //     move = move + 1*direction;
+        //     if( move > window.innerWidth - 100 || move <= 0){
+        //         direction = direction*(-1);
+        //     }
+        //     elem.style.left = move + 'px';
+        // }
+
+        // function moveFunc(){
+        //     move = move + 1*direction;
+        //     if( move > window.innerHeight - 100 || move <= 0){
+        //         direction = direction*(-1);
+        //     }
+        //     elem.style.top = move + 'px';
+        // }
+
+
+        function moveFunc() {
+            moveX = moveX + 1*directionX;
+            if( moveX >= window.innerWidth - 100 || moveX <= 0){
+                directionX = directionX*(-1);
+            }
+            elem.style.left = moveX + 'px';
+            moveY = moveY + 1*directionY;
+            if( moveY >= window.innerHeight - 100 || moveY <= 0){
+                directionY = directionY*(-1);
+            }
+            elem.style.top = moveY + 'px';
+        }
+
+        function stop(){
+            if (timerIsOn === 1) {
+                clearInterval(moveInterval);
+                timerIsOn = 0;
+            } else {
+                moveInterval = setInterval(moveFunc, 5);
+                timerIsOn = 1;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Live Watch</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body onload="startTime()">
+    <div id="txt"></div>
+    <script>
+        function startTime(){
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            console.log(`${h}시 ${m}분 ${s}초`);
+            setTimeout(startTime, 500);
+            h = zeroCheck(h);
+            m = zeroCheck(m);
+            s = zeroCheck(s);
+            document.getElementById('txt').innerHTML = `${h}시 ${m}분 ${s}초`;
+
+            /*
+            실습:
+            h,m,s 의 값이 10보다 작을 경우 '0'을 숫자 앞쪽에 추가하는
+            함수를 작성하시오.
+            */
+
+            function zeroCheck( time ){
+                if( time < 10 ) {
+                    return time = '0' + time;
+                } else {
+                    return time;
+                }
+            }
+
+            // 강사님 풀이
+            // function checkTime(i){
+            //     if( i < 10 ){
+            //         return '0' + i;
+            //     }
+            //     return i;
+            // }
+        }
+        // startTime();
+    </script>
+</body>
+
+</html>

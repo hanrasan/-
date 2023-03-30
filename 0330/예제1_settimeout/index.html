@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Set timeout</title>
+    <script>
+        // settimeout
+        // 일정 시간 이후 특정함수(로직)이 작동
+        // 콜백함수: 대부분 매개변수로 들어간다. 나중에 불러와 다시 실행된다는 의미에서 콜백
+        // setTimeout( function(){
+        //     console.log('this is settimeout!');
+        // }, 5000 );
+
+        let settimeNum;
+        let num = prompt('숫자를 입력해주세요.', '숫자');
+
+        settimeNum = setTimeout( alertFunc, 5000 );
+
+        if( num < 10 ){
+            clearTimeout(settimeNum);
+            alert('clear settimeout');
+        }
+
+        function alertFunc(){
+            alert('안녕하쇼. 셋타임아웃이요.');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
