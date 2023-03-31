@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+
+* { margin: 0; padding: 0; }
+
+html,
+body { height: 100%; }
+
+#watch-wrap {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+#watch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    font-size: 64px;
+    background-color: skyblue;
+    color: white;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+}
+
+.btn-group button {
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    padding: 10px 20px;
+    outline: none;
+}
+
+.btn-group button:last-child{
+    background-color: red;
+}

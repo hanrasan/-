@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>chat together</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header id="header">
+        <h1>chat together</h1> 
+    </header>
+    <div class="chat-wrap">
+        <!-- chat a -->
+        <div class="chat">
+            <div class="title">chris</div>
+            <div class="chat-box">
+                <!-- 채팅영역 -->
+                <div class="line char-b">
+                    <div class="txt">안녕하세요.</div>
+                </div>
+                <div class="line char-a right">
+                    <div class="txt">안녕하세요.</div>
+                </div>
+            </div>
+            <div class="input-box">
+                <!-- 입력폼 영역 -->
+                <input type="text" class="user-a"><!--onkeypress event 추가영역-->
+                <button class="user-a" onclick="chatFunc()">보내기</button><!--onclick event 추가영역-->
+            </div>
+        </div>
+    </div>
+    <script>
+        function chatFunc(){
+            console.log('click!!');
+        }
+    </script>
+</body>
+</html>

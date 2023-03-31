@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Together</title>
+    <link rel="stylesheet" href="./css/style1.css">
+</head>
+<body>
+    <header id="header">
+        <h1>chat together</h1>
+    </header>
+    <div class="chat-wrap">
+        <div class="chat">
+            <div class="title">chris</div>
+            <div class="chat-box">
+                <!-- 채팅영역 -->
+                <div class="line char-b">
+                    <div class="txt">안녕하세요</div>
+                </div>
+                <div class="line char-a right">
+                    <div class="txt">안녕하세요</div>
+                </div>
+            </div>
+            <div class="input-box">
+                <!-- 입력영역 -->
+                <!-- onkeypress event 추가 -->
+                <input type="text" class="user-a">
+                <!-- onclick event 추가 -->
+                <button class="user-a" onclick="chatFunc(this)">보내기</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function chatFunc(e){
+            // console.log(e.previousElementSibling.value);
+            let inputText = e.previousElementSibling.value;
+            let elem = document.querySelectorAll('.chat-box');
+            let htmlText = '';
+            htmlText = elem[0].innerHTML;
+            htmlText += '<div class="line char-a right"><div class="txt">'+inputText+'</div></div>';
+            elem[0].innerHTML = htmlText;
+            // console.log(htmlText);
+        }
+    </script>
+</body>
+</html>

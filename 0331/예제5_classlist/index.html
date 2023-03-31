@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Class List</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="text" class="change-font-style change-bg change-width">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur, explicabo unde ad officiis eligendi impedit autem aspernatur, amet, sunt atque esse veritatis dicta hic est nemo in ipsum enim.
+    </div>
+    <button onclick="textFunc()">click here!</button>
+    <script>
+        const elem = document.querySelector('#text');
+        function textFunc(){
+            // class 단일 추가
+            // elem.classList.add('change-font-style');
+            // class 다중 추가
+            // elem.classList.add('change-font-style','change-bg','change-width');
+            // class 다중 삭제
+            // elem.classList.remove('change-font-style','change-bg','change-width');
+            // class 단일 삭제
+            elem.classList.remove('change-font-style');
+        }
+    </script>
+</body>
+</html>

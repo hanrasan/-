@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Query Selector</title>
+</head>
+
+<body>
+    <p class="txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit deleniti aliquid, perferendis nam voluptate et porro, quia veniam aspernatur expedita labore nesciunt nostrum architecto doloremque consequatur a eius dolorem animi?</p>
+    <p class="txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit deleniti aliquid, perferendis nam voluptate et porro, quia veniam aspernatur expedita labore nesciunt nostrum architecto doloremque consequatur a eius dolorem animi?</p>
+    <div class="nav">
+        <ul>
+            <li><a href="#" class="txt">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+        </ul>
+    </div>
+    <button onclick="textColorChange()">click here!</button>
+    <script>
+        const elem = document.querySelector('li .txt');
+        let distance = 0;
+        function textColorChange(){
+            distance += 10;
+            elem.style.position = 'absolute';
+            elem.style.left = distance + 'px';
+        }
+    </script>
+</body>
+
+</html>

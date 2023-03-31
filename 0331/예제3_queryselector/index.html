@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Query Selector</title>
+</head>
+
+<body>
+    <p class="txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit deleniti aliquid, perferendis nam voluptate et porro, quia veniam aspernatur expedita labore nesciunt nostrum architecto doloremque consequatur a eius dolorem animi?</p>
+    <p class="txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit deleniti aliquid, perferendis nam voluptate et porro, quia veniam aspernatur expedita labore nesciunt nostrum architecto doloremque consequatur a eius dolorem animi?</p>
+    <button onclick="textColorChange()">click here!</button>
+    <script>
+        function textColorChange(){
+            // let elem = document.getElementsByTagName('p');
+            // console.log(elem[0]);
+            
+            // 단일요소
+            // let elem = document.querySelector('.txt');
+            // elem.style.color = 'red';
+            // console.log(elem);
+            
+            // 복수요소
+            let elem = document.querySelectorAll('.txt');
+            for( let i = 0; i < elem.length; i++ ){
+                elem[i].style.color = 'red';
+            }
+            // console.log(elem[1]);
+        }
+    </script>
+</body>
+
+</html>

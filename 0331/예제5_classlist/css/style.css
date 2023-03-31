@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+
+* { margin: 0; padding: 0; }
+ul,
+ol { list-style: none; }
+button { border: 0; background: none; }
+button,
+input { outline: none; }
+
+html,
+body { height: 100%; }
+
+#text {
+    transition: 1s;
+}
+
+.change-width {
+    width: 300px;
+}
+
+.change-bg {
+    background-color: green;
+}
+
+.change-font-style {
+    font-size: 25px;
+    color: yellow;
+}
+
+#sidemenu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -300px;
+    width: 300px;
+    background-color: goldenrod;
+    transition: 0.1s;
+}
+
+#sidemenu.on {
+    right: 0;
+}

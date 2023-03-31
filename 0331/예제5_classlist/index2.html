@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Class List</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <button onclick="sideMenuSlide()">view menu</button>
+    <div id="sidemenu">
+        <ul>
+            <li><a href="#" onclick="sideMenuSlide()">menu1</a></li>
+            <li><a href="#" onclick="sideMenuSlide()">menu2</a></li>
+            <li><a href="#" onclick="sideMenuSlide()">menu3</a></li>
+        </ul>
+    </div>
+    <script>
+        let elem = document.querySelector('#sidemenu');
+        function sideMenuSlide(){
+            // if( elem.getAttribute('class') == null || elem.getAttribute('class') == '' ){
+            //     elem.classList.add('on');
+            // } else {
+            //     elem.classList.remove('on');
+            // }
+
+            /*
+            실습:
+            위 코드를 classList의 contains()를 활용하여
+            수정하시오.
+            */
+            // if( !elem.classList.contains('on') ){
+            //     elem.classList.add('on');
+            // } else {
+            //     elem.classList.remove('on');
+            // }
+
+            elem.classList.toggle('on');
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <h1><a href="http://naver.com" target="_self">logo</a></h1>
+        </header>
+    </div>
+    <!-- <div class="test"></div> -->
+    <div class="container">
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil soluta accusamus sit rem consequatur, molestias neque deleniti accusantium suscipit voluptatum labore dolorem commodi recusandae exercitationem natus animi ut dignissimos velit?</p>
+        </div>
+    </div>
+    <!-- <div class="test2">test</div> -->
+    <footer>
+        <h3>copyright</h3>
+    </footer>
+    <script>
+        // attribute: 속성
+
+        // getAttribute 속성값 가져오기
+        let x = document.querySelectorAll('div')[0];
+        console.log(x.getAttribute('id'));
+        console.log(x.id);
+        /*
+        실습:
+        'content' 클래스 텍스트를 출력하는 코드를 작성하시오.
+        */
+       // let a = document.querySelector('.content p');
+       // console.log(a.textContent);
+       let num = document.querySelector('.container div').getAttribute('class');
+       console.log(num);
+       
+       let elem = document.querySelectorAll('div');
+       let divLeng = elem.length;
+       for( let i = 0; i < divLeng; i++ ){
+           if(elem[i].getAttribute('class') == 'content'){
+               console.log(elem[i].getAttribute('class'));
+            }
+        }
+
+        // for( items of elem ){
+        //     console.log(items.getAttribute('class'));
+        // }
+
+        // setAttribute 속성값 넣기
+        // x.id = 'test';
+        let aNum = document.querySelector('h1 a');
+        // document.querySelector('h1 a').setAttribute('href','http://daum.net');
+        aNum.href = 'http://daum.net';
+        aNum.setAttribute('class','link test selected');
+
+        let hrefNum = aNum.href;
+        console.log(hrefNum);
+
+        /*
+        실습:
+        hrefNum 에서 split()를 사용하여 'daum'을 추출하고
+        경고창으로 '현재 방문하신 사이트는 daum입니다.'로
+        출력하는 로직을 작성하시오.
+        */
+        const site = hrefNum.split('http://')[1].split('.')[0];
+        alert('현재 방문하신 사이트는 '+site+'입니다.');
+    </script>
+</body>
+
+</html>

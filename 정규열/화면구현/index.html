@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="watch-wrap">
+        <div id="watch">0</div>
+        <div class="btn-group">
+            <button onclick="startCount()">start</button>
+            <button onclick="pauseCount()">pause</button>
+            <button onclick="resetCount()">reset</button>
+        </div>
+    </div>
+    <script>
+        let count = 0;
+        let t;
+        let timerIsOn = 0;
+        
+        function timeCount(){
+            document.getElementById('watch').innerHTML = count;
+            count++;
+            t = setTimeout(timeCount, 1000);
+        }
+        
+        function startCount(){
+            timeCount();
+            timerIsOn = 1;
+        }
+
+        function pauseCount(){
+            timerIsOn = 0;
+            clearTimeout(t);
+        }
+
+        function resetCount(){
+            timerIsOn = 0;
+            count = 0;
+            clearTimeout(t);
+            document.getElementById('watch').innerHTML = count;
+        }
+    </script>
+</body>
+</html>

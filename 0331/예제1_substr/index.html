@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Substr</title>
+</head>
+
+<body>
+    <script>
+        const nameStr = ['홍길동', '박길동'];
+        const str = 'hello javascript';
+
+        console.log(nameStr.length);
+        console.log(str.length);
+
+        /*
+        실습:
+        str 코드에서 subStr 메소드를 사용하여
+        'hi java'를 console.log에 출력하시오.
+        */
+        console.log(str.substr(0, 1) + str.substr(13, 1) + str.substr(5, 5));
+        console.log(`${str.substr(0, 1)}${str.substr(13, 1)}${str.substr(5, 5)}`);
+
+        const strNum = "20230331";
+        const numberText = "1234567890";
+
+        /*
+        실습:
+        '오늘은 **일입니다. 저는 ***입니다. 나이는 **세입니다.'
+        '오늘은 31일입니다. 저는 박길동입니다. 나이는 23세입니다.'
+        */
+        // console.log(strNum.substr(strNum.length - 2, 2));
+        console.log(`오늘은 ${strNum.substr(6, 2)}일입니다. 저는 ${nameStr[1]}입니다. 나이는 ${numberText.substr(1, 2)}세입니다.`);
+    </script>
+</body>
+
+</html>

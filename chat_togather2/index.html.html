@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>let's chat togather</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="header">
+    <h1>Let's chat togather</h1>
+  </div>
+  <div class="chatting_wrap">
+    <!--chat a-->
+    <div class="chatting">
+      <div class="title">chris</div>
+      <div class="chat_box">
+        <!--채팅영역-->
+      </div>
+      <div class="input_box">
+        <!--입력창-->
+       <input type="text" class="user_a" onkeypress='inputChat(this)'><!--onkeypress event 추가영역-->
+       <button class="user_a" onclick="sendTxt(this)">보내기</button><!--onclick event 추가영역-->
+      </div>
+    </div>
+    <!--chat b-->
+    <div class="chatting">
+      <div class="title">jane</div>
+      <div class="chat_box">
+        <!--채팅영역-->
+      </div>
+      <div class="input_box">
+        <!--입력창-->
+       <input type="text" class="user_b" onkeypress="inputChat(this)"><!--onkeypress event 추가영역-->
+       <button class="user_b" onclick="sendTxt(this)">보내기</button><!--onclick event 추가영역-->
+      </div>
+    </div>
+    <!--chat c-->
+    <div class="chatting">
+      <div class="title">jane</div>
+      <div class="chat_box">
+        <!--채팅영역-->
+      </div>
+      <div class="input_box">
+        <!--입력창-->
+       <input type="text" class="user_c" onkeypress="inputChat(this)"><!--onkeypress event 추가영역-->
+       <button class="user_c" onclick="sendTxt(this)">보내기</button><!--onclick event 추가영역-->
+      </div>
+    </div>
+  </div>
+
+<!--chat script-->
+  <script>
+  //채팅 실행 로직
+  var inputTxt = '';//전역변수 선언
+
+  function inputChat(event){// 키보드 타이핑 및 엔터 버튼 실행
+      inputTxt = event.value;
+      if( window.event.keyCode == 13 ){//엔터키를 사용했을때
+        if( event.value != '' ){//입력창이 비어있지않을때 실행
+          chattingFunc(event,0);
+          clearText(inputTxt,event,0);
+        }
+      }
+  }
+
+  function sendTxt(e){//보내기 버튼 실행
+    if( e.previousElementSibling.value != '' ){//입력창이 비어있지않을때 실행
+      chattingFunc(e,1);
+      clearText(inputTxt,e,1);
+    }
+  }
+
+  function clearText(t,v,i){
+    t = '';
+    if( i == 1 ){
+      v.previousElementSibling.value = '';
+    }else{
+      v.value = '';
+    }
+  }
+
+  function chattingFunc(e,i){
+      //console.log(e.previousElementSibling.value);
+      if( i == 1 ){//보내기버튼으로 텍스트 입력
+        inputTxt = e.previousElementSibling.value;//input의 텍스트 값 가져오기
+      }
+
+      var thisClassName = e.getAttribute('class');
+      var elem = document.querySelectorAll('.chat_box');
+      var elemLeng = elem.length;
+      var txt = [];//채팅창에서 입력값 받기
+      var htmlTxt = [];// 채팅창 내용 담을 변수
+      for( var i=0; i<elemLeng; i++ ){
+          htmlTxt[i] = elem[i].innerHTML;
+        //chat a,chat b 기존 대화내용 가져오기
+      }
+
+      if( thisClassName == 'user_a'){//사용자 창에 본인 텍스트를 입력할때
+        txt.push('<div class="line char_a right"><div class="txt">'+inputTxt+'</div></div>');
+        txt.push('<div class="line char_a"><div class="txt">'+inputTxt+'</div></div>');
+        txt.push('<div class="line char_a"><div class="txt">'+inputTxt+'</div></div>');
+      }else if( thisClassName == 'user_b'){//상대가 보낸 입력값을 넣을때
+        txt.push('<div class="line char_b"><div class="txt">'+inputTxt+'</div></div>');
+        txt.push('<div class="line char_b right"><div class="txt">'+inputTxt+'</div></div>');
+        txt.push('<div class="line char_b"><div class="txt">'+inputTxt+'</div></div>');
+      }else{
+        txt.push('<div class="line char_c"><div class="txt">'+inputTxt+'</div></div>');
+        txt.push('<div class="line char_c"><div class="txt">'+inputTxt+'</div></div>');
+        txt.push('<div class="line char_c right"><div class="txt">'+inputTxt+'</div></div>');
+      }
+      for( var i=0; i<elemLeng; i++ ){
+        htmlTxt[i] += txt[i];
+        elem[i].innerHTML = htmlTxt[i];  // 입력된 값을 포함하여 대화창으로 다시 입력
+        //스크롤이 생겨서 최신 대화내용이 스크롤 영역으로 들어가서 안보일 경우
+        elem[i].scrollTop = elem[i].scrollHeight - elem[i].offsetHeight;
+      }
+  }
+  </script>
+</body>
+</html>
